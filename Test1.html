@@ -1,10 +1,71 @@
-<!DOCTYPE html>
-<html>
-<body>
+Embracing risk
+ Manage, be open and learn
+ Every release comes with risk
+ Be prepared
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-<p>My second paragraph.</p>
+Define Error Budget correctly
+Capacity - Scale up and down based on your traffic and business
+timings.
+Introduce Rail concept
 
-</body>
-</html>
+Service level objectives
+ Decide as a team = SRE, DevOps, Product Owners
+
+
+
+Eliminating toil
+ If it doesn't need human decisions, automate it
+ If it costs more to automate than to perform the task, leave it
+
+Scenario - Business wants RFB reports so that can be done through runbook automation
+and automated consolidated healthcheck lookups.
+
+Scenario 2 - Weekly purging of logs and cleanup space manually was an issue. 
+
+Monitoring distributed systems
+ Reduce fatigue
+ What broke, when and why
+ Fix root causes to prevent repeats
+
+Automation
+ The move to self-healing systems
+ Anything that doesn't need human decision or interaction
+ When it doesn't exceed the error budget or the total time to fix manually
+
+****Release engineering
+ Consistent deployment
+ Solid understanding of SCM, Testing, CI, Post deployment monitoring
+
+-Parallel Build
+-Status check after build
+-changes in GIT is the the criteria to build in jenkins.
+-Testing after the build and before promoting to Prod.
+
+
+Simplicity
+ "At the end of the day, our job is to keep agility and stability in balance"
+ Smaller releases, easier measurements
+
+
+
+Others:
+
+Scenario:
+Blameless PM - 
+Issue: The orderbook DB went down due to planned maintenance activity.
+What we did:
+Resolution - Roolback of the patch was performed.
+Detection - User reported that they were not able to view portfolio or Order Hist.
+Multiple incidents were reported.
+Action Items - 
+1. Build proactive monitoring on DB failures to identify before the field communicates the issue.
+2. Change Managment communication to the stakeholders in advance on the downtime and signoff.
+3. Resiliency should be build to failover to backup DB to avoid any downtime.
+Lessons Learned - 
+Not to blame the DBA or Event coordinator but put in measures to improve the process
+and reduce the communication gap between infra and app owners.
+
+
+
+
+
